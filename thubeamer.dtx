@@ -108,10 +108,10 @@ This package consists of the file  thubeamer.dtx,
 %<thucolorstyle>\ProvidesPackage{beamercolorthemethubeamer}
 %<thuinnerstyle>\ProvidesPackage{beamerinnerthemethubeamer}
 %<thuouterstyle>\ProvidesPackage{beamerouterthemethubeamer}
-%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2023/11/27 v1.2 A Beamer Theme for Tsinghua University (THU)]
+%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2025/03/06 v1.0 A Beamer Theme for UESTCer]
 %
 %<*driver>
-\ProvidesFile{thubeamer.dtx}[2023/11/27 v1.2 A Beamer Theme for Tsinghua University (THU)]
+\ProvidesFile{thubeamer.dtx}[2025/03/06 v1.0 A Beamer Theme for UESTCer]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -164,9 +164,9 @@ This package consists of the file  thubeamer.dtx,
 % \IndexPrologue{\section*{索~~~~引}}
 % \GlossaryPrologue{\section*{修改记录}}
 %
-% \definecolor{beamer@headercolor}{RGB}{129,48,140}
-% \title{\bfseries\color{beamer@headercolor}\thubeamer：清华大学风格\\ Beamer主题}
-% \author{{\Large\fangsong 杨敬轩}\\[5pt]\texttt{yanglatex2e@gmail.com}\\[5pt]\texttt{yangjx20@mails.tsinghua.edu.cn}}
+% \definecolor{beamer@headercolor}{RGB}{25, 25, 89}
+% \title{\bfseries\color{beamer@headercolor}\uestcbeamer: 电子科技大学风格Beamer主题}
+% \author{{\Large\fangsong Kytolly}\\[5pt]\texttt{kytolly.xqy@gmail.com}}
 % \date{\fileversion\ (\filedate)}
 %
 % \maketitle\thispagestyle{empty}
@@ -175,7 +175,7 @@ This package consists of the file  thubeamer.dtx,
 %
 % \def\abstractname{\Large 摘\quad 要}
 % \begin{abstract}\normalsize\vskip0.5cm
-% \thubeamer~主题为作者在准备课程展示时设计制作，
+% \uestcbeamer~主题为作者在准备课程展示时设计制作，
 % 旨在帮助清华大学师生进行学术交流或其他需要演示文稿活动时，方便的使用 \LaTeX{} 制作含有学校特色的演示文稿。
 % \end{abstract}
 %
@@ -204,7 +204,7 @@ This package consists of the file  thubeamer.dtx,
 % \clearpage
 %
 % \section{模板介绍}
-% \thubeamer\ (\textbf{T}sing\textbf{H}ua \textbf{U}niversity \LaTeX{}
+% \uestcbeamer\ (\textbf{T}sing\textbf{H}ua \textbf{U}niversity \LaTeX{}
 % \textbf{Beamer} Template) 是为了帮助清华大学师生撰写演示文稿而编写的 \LaTeX{} Beamer 模板。
 %
 % 本文档将尽量完整的介绍模板的使用方法，如有不清楚之处可以参考示例文档或者根据
@@ -213,7 +213,7 @@ This package consists of the file  thubeamer.dtx,
 % \section{安装}
 % \label{sec:installation}
 %
-% \thubeamer\ 已经上传 CTAN，已包含在 TeXLive 与 MiKTeX 发行版中。
+% \uestcbeamer\ 已经上传 CTAN，已包含在 TeXLive 与 MiKTeX 发行版中。
 % 安装方法：打开命令行，输入以下命令即可
 % \begin{shell}
 % $ tlmgr install thubeamer
@@ -223,14 +223,14 @@ This package consists of the file  thubeamer.dtx,
 % $ texdoc thubeamer
 % \end{shell}
 %
-% 如果要使用开发版，需自己下载，\thubeamer\ 相关链接：
+% 如果要使用开发版，需自己下载，\uestcbeamer\ 相关链接：
 % \begin{itemize}
 % \item 主页：\href{https://github.com/YangLaTeX/thubeamer}{GitHub}
 % \item 下载：\href{http://www.ctan.org/pkg/thubeamer}{CTAN}
 % \end{itemize}
 %
 % \subsection{模板的组成}
-% 下表列出了 \thubeamer{} 的主要文件及其功能介绍：
+% 下表列出了 \uestcbeamer{} 的主要文件及其功能介绍：
 %
 % \changes{v1.1.1}{2022/05/20}{omit vertical rules}
 % 
@@ -319,7 +319,7 @@ This package consists of the file  thubeamer.dtx,
 % \label{sec:thanks}
 % 感谢 \href{https://github.com/StickCui/XDUstyle-Beamer-Theme}{XDUstyle}、\href{https://github.com/tl3shi/THUBeamer}{thubeamer} 模板的作者，本模板基于他们改编而来！
 %
-% 欢迎各位到 \href{http://github.com/YangLaTeX/thubeamer/}{\thubeamer\ Github 主页}贡献！
+% 欢迎各位到 \href{http://github.com/YangLaTeX/thubeamer/}{\uestcbeamer\ Github 主页}贡献！
 %
 % \StopEventually{\PrintChanges\PrintIndex}
 % \clearpage
@@ -330,7 +330,7 @@ This package consists of the file  thubeamer.dtx,
 % 导入必要宏包
 %    \begin{macrocode}
 %<*thubeamer>
-\def\thubeamer{\textsc{thu}\-\textsc{Beamer}}
+\def\uestcbeamer{\textsc{thu}\-\textsc{Beamer}}
 \RequirePackage{tikz}
 \usetikzlibrary{external}
 \RequirePackage{pgf}
@@ -418,21 +418,40 @@ This package consists of the file  thubeamer.dtx,
 %    \begin{macrocode}
 \mode<presentation>
 
-\ifx\beamer@thucolor\beamer@thucolorpurple
-  \definecolor{beamer@textcolor}{RGB}{119,33,151}
-  \definecolor{beamer@headercolor}{RGB}{129,48,140} % purple
-  \ifx\beamer@thubar\beamer@thusidebar
-    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+% \ifx\beamer@thucolor\beamer@thucolorpurple
+%   \definecolor{beamer@textcolor}{RGB}{119,33,151}
+%   \definecolor{beamer@headercolor}{RGB}{129,48,140} % purple
+%   \ifx\beamer@thubar\beamer@thusidebar
+%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+%   \else
+%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+%   \fi
+% \else
+%   \definecolor{beamer@textcolor}{RGB}{119,33,151}
+%   \definecolor{beamer@headercolor}{RGB}{129,48,140}
+%   \ifx\beamer@thubar\beamer@thusidebar
+%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+%   \else
+%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+%   \fi
+% \fi
+
+% 控制ppt顶部和底部脚注颜色
+\ifx\beamer@uestccolor\beamer@uestccolorblue
+  \definecolor{beamer@textcolor}{RGB}{25, 25, 89}
+  \definecolor{beamer@headercolor}{RGB}{51, 51, 178} % purple
+  \ifx\beamer@uestcbar\beamer@uestcsidebar
+    \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \else
-    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+    \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \fi
 \else
-  \definecolor{beamer@textcolor}{RGB}{119,33,151}
-  \definecolor{beamer@headercolor}{RGB}{129,48,140}
-  \ifx\beamer@thubar\beamer@thusidebar
-    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+  \definecolor{beamer@textcolor}{RGB}{25, 25, 89}
+  \definecolor{beamer@headercolor}{RGB}{51, 51, 178}
+  \ifx\beamer@thubar\beamer@uestcsidebar
+    \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \else
-    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+    \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \fi
 \fi
 
@@ -712,7 +731,9 @@ This package consists of the file  thubeamer.dtx,
    rulecolor=\color{purple},
    language=bash}
 
-\definecolor{beamer@headercolor}{RGB}{21,95,130}
+% \definecolor{beamer@headercolor}{RGB}{21,95,130}
+\definecolor{beamer@headercolor}{RGB}{51,, 51, 178}
+
 \lstdefinestyle{lstStyleLaTeX}{%
    style=lstStyleBase,
    frame=l,
@@ -734,8 +755,14 @@ This package consists of the file  thubeamer.dtx,
   \marginpar{\small\raggedleft\color{purple}\bfseries\strut #1}}
 \newcommand{\note}[2][Note]{{%
   \color{magenta}{\bfseries #1}\emph{#2}}}
-\def\thubeamer{\textsc{Thu}\-\textsc{Beamer}}
-\def\thu{清华大学}
+
+
+% \def\uestcbeamer{\textsc{Thu}\-\textsc{Beamer}}
+% \def\thu{清华大学}
+\def \uestcbeamer{\textsc{Uestc}\-\textsc{Beamer}}
+\def \uestc{电子科技大学}
+
+
 %</dtx-style>
 %    \end{macrocode}
 % \fi
