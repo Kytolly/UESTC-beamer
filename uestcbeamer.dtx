@@ -321,8 +321,8 @@ This package consists of the file  thubeamer.dtx,
 % \subsection{主题主文件部分}
 % 导入必要宏包
 %    \begin{macrocode}
-%<*thubeamer>
-\def\uestcbeamer{\textsc{thu}\-\textsc{Beamer}}
+%<*uestcbeamer>
+\def\uestcbeamer{\textsc{uestc}\-\textsc{Beamer}}
 \RequirePackage{tikz}
 \usetikzlibrary{external}
 \RequirePackage{pgf}
@@ -349,32 +349,32 @@ This package consists of the file  thubeamer.dtx,
 %
 % 主题选项
 %    \begin{macrocode}
-\DeclareOptionBeamer{thupurple}{
-  \PassOptionsToPackage{thupurple}{beamercolorthemethubeamer}
-  \PassOptionsToPackage{thupurple}{beamerinnerthemethubeamer}
-  \PassOptionsToPackage{thupurple}{beamerouterthemethubeamer}
+\DeclareOptionBeamer{uestcblue}{
+  \PassOptionsToPackage{uestcblue}{beamercolorthemeuestcbeamer}
+  \PassOptionsToPackage{uestcblue}{beamerinnerthemeuestcbeamer}
+  \PassOptionsToPackage{uestcblue}{beamerouterthemeuestcbeamer}
 }
-\DeclareOptionBeamer{thupurple2}{
-  \PassOptionsToPackage{thupurple2}{beamercolorthemethubeamer}
-  \PassOptionsToPackage{thupurple2}{beamerinnerthemethubeamer}
-  \PassOptionsToPackage{thupurple2}{beamerouterthemethubeamer}
+\DeclareOptionBeamer{uestcblue2}{
+  \PassOptionsToPackage{uestcblue2}{beamercolorthemeuestcbeamer}
+  \PassOptionsToPackage{uestcblue2}{beamerinnerthemeuestcbeamer}
+  \PassOptionsToPackage{uestcblue2}{beamerouterthemeuestcbeamer}
 }
 \DeclareOptionBeamer{smoothbars}{
-  \PassOptionsToPackage{smoothbars}{beamercolorthemethubeamer}
-  \PassOptionsToPackage{smoothbars}{beamerouterthemethubeamer}
+  \PassOptionsToPackage{smoothbars}{beamercolorthemeuestcbeamer}
+  \PassOptionsToPackage{smoothbars}{beamerouterthemeuestcbeamer}
 }
 \DeclareOptionBeamer{sidebar}{
-  \PassOptionsToPackage{sidebar}{beamercolorthemethubeamer}
-  \PassOptionsToPackage{sidebar}{beamerouterthemethubeamer}
+  \PassOptionsToPackage{sidebar}{beamercolorthemeuestcbeamer}
+  \PassOptionsToPackage{sidebar}{beamerouterthemeuestcbeamer}
 }
 \DeclareOptionBeamer{sectiontoc}{
-  \PassOptionsToPackage{sectiontoc}{beamerinnerthemethubeamer}
+  \PassOptionsToPackage{sectiontoc}{beamerinnerthemeuestcbeamer}
 }
 \DeclareOptionBeamer{subsectiontoc}{
-  \PassOptionsToPackage{subsectiontoc}{beamerinnerthemethubeamer}
+  \PassOptionsToPackage{subsectiontoc}{beamerinnerthemeuestcbeamer}
 }
 \DeclareOptionBeamer{en}{
-  \PassOptionsToPackage{en}{beamerinnerthemethubeamer}
+  \PassOptionsToPackage{en}{beamerinnerthemeuestcbeamer}
 }
 \ProcessOptionsBeamer
 %    \end{macrocode}
@@ -383,55 +383,37 @@ This package consists of the file  thubeamer.dtx,
 %    \begin{macrocode}
 \mode<presentation>
 {
-  \useinnertheme{thubeamer}
-  \useoutertheme{thubeamer}
-  \usecolortheme{thubeamer}
+  \useinnertheme{uestcbeamer}
+  \useoutertheme{uestcbeamer}
+  \usecolortheme{uestcbeamer}
 }
 
 \mode<all>
-%</thubeamer>
+%</uestcbeamer>
 %    \end{macrocode}
 % \subsection{主题配色文件部分}
 %
 % 参数设置
 %    \begin{macrocode}
-%<*thucolorstyle>
-\DeclareOptionBeamer{thupurple}{\def\beamer@thucolor{thupurple}}
-\DeclareOptionBeamer{thupurple2}{\def\beamer@thucolor{thupurple2}}
-\DeclareOptionBeamer{smoothbars}{\def\beamer@thubar{smoothbars}}
-\DeclareOptionBeamer{sidebar}{\def\beamer@thubar{sidebar}}
+%<*uestccolorstyle>
+\DeclareOptionBeamer{uestcblue}{\def\beamer@uestccolor{uestcblue}}
+\DeclareOptionBeamer{uestcblue2}{\def\beamer@uestccolor{uestcblue2}}
+\DeclareOptionBeamer{smoothbars}{\def\beamer@uestcbar{smoothbars}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@uestcbar{sidebar}}
 \ProcessOptionsBeamer
 
-\def\beamer@thucolorpurple{thupurple}
-\def\beamer@thusidebar{sidebar}
+\def\beamer@uestccolorblue{uestcblue}
+\def\beamer@uestcsidebar{sidebar}
 %    \end{macrocode}
 %
 % 颜色设置。
 %    \begin{macrocode}
 \mode<presentation>
 
-% \ifx\beamer@thucolor\beamer@thucolorpurple
-%   \definecolor{beamer@textcolor}{RGB}{119,33,151}
-%   \definecolor{beamer@headercolor}{RGB}{129,48,140} % purple
-%   \ifx\beamer@thubar\beamer@thusidebar
-%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
-%   \else
-%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
-%   \fi
-% \else
-%   \definecolor{beamer@textcolor}{RGB}{119,33,151}
-%   \definecolor{beamer@headercolor}{RGB}{129,48,140}
-%   \ifx\beamer@thubar\beamer@thusidebar
-%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
-%   \else
-%     \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
-%   \fi
-% \fi
-
 % 控制ppt顶部和底部脚注颜色
 \ifx\beamer@uestccolor\beamer@uestccolorblue
   \definecolor{beamer@textcolor}{RGB}{25, 25, 89}
-  \definecolor{beamer@headercolor}{RGB}{51, 51, 178} % purple
+  \definecolor{beamer@headercolor}{RGB}{51, 51, 178} % blue
   \ifx\beamer@uestcbar\beamer@uestcsidebar
     \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \else
@@ -440,16 +422,15 @@ This package consists of the file  thubeamer.dtx,
 \else
   \definecolor{beamer@textcolor}{RGB}{25, 25, 89}
   \definecolor{beamer@headercolor}{RGB}{51, 51, 178}
-  \ifx\beamer@thubar\beamer@uestcsidebar
+  \ifx\beamer@uestcbar\beamer@uestcsidebar
     \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \else
     \definecolor{beamer@sidebarcolor}{RGB}{51, 51, 178}
   \fi
 \fi
 
-% \setbeamercolor{footline}{bg=beamer@headercolor}
 \setbeamercolor{title}{fg=white,bg=beamer@headercolor}
-\ifx\beamer@thubar\beamer@thusidebar
+\ifx\beamer@uestcbar\beamer@uestcsidebar
   \setbeamercolor{frametitle}{fg=beamer@headercolor,bg=beamer@headercolor!10}
 \else
   \setbeamercolor{frametitle}{fg=white,bg=beamer@headercolor}
@@ -480,7 +461,7 @@ This package consists of the file  thubeamer.dtx,
 \setbeamercolor{section in sidebar}{fg=beamer@textcolor}
 \setbeamercolor{section in sidebar shaded}{fg=gray}
 \setbeamercolor{separation line}{}
-\ifx\beamer@thubar\beamer@thusidebar
+\ifx\beamer@uestcbar\beamer@uestcsidebar
   \setbeamercolor{sidebar}{bg=beamer@sidebarcolor!10}
 \else
   \setbeamercolor{sidebar}{bg=beamer@sidebarcolor}
@@ -492,14 +473,14 @@ This package consists of the file  thubeamer.dtx,
 \setbeamercolor{logo}{bg=beamer@headercolor!20}
 
 \mode<all>
-%</thucolorstyle>
+%</uestccolorstyle>
 %    \end{macrocode}
 %
 % \subsection{内部主题文件部分}
 %
 % 必要宏包
 %    \begin{macrocode}
-%<*thuinnerstyle>
+%<*uestcinnerstyle>
 \RequirePackage{tikz}
 \usetikzlibrary{external}
 %    \end{macrocode}
@@ -507,28 +488,27 @@ This package consists of the file  thubeamer.dtx,
 % 参数设置
 % \changes{v1.1.0}{2021/11/15}{add option `en' for preparing beamer in English}
 %    \begin{macrocode}
-\DeclareOptionBeamer{en}{\def\beamer@thulang{english}}
-\DeclareOptionBeamer{sectiontoc}{\def\beamer@thusectoc{sectiontoc}}
-\DeclareOptionBeamer{subsectiontoc}{\def\beamer@thusubsectoc{subsectiontoc}}
+\DeclareOptionBeamer{en}{\def\beamer@uestclang{english}}
+\DeclareOptionBeamer{sectiontoc}{\def\beamer@uestcsectoc{sectiontoc}}
+\DeclareOptionBeamer{subsectiontoc}{\def\beamer@uestcsubsectoc{subsectiontoc}}
 \ProcessOptionsBeamer
 
-\def\beamer@thulanguage{english}
-\def\beamer@thusectiontoc{sectiontoc}
-\def\beamer@thusubsectiontoc{subsectiontoc}
+\def\beamer@uestclanguage{english}
+\def\beamer@uestcsectiontoc{sectiontoc}
+\def\beamer@uestcsubsectiontoc{subsectiontoc}
 %    \end{macrocode}
 %
 % 特殊设置
 %    \begin{macrocode}
 \mode<presentation>
 
-\ifx\beamer@thulang\beamer@thulanguage
+\ifx\beamer@uestclang\beamer@uestclanguage
   \relax
 \else
   \RequirePackage{ctex}
 \fi
 
 \useinnertheme{circles}
-% \usefonttheme{structurebold}
 \setbeamertemplate{caption}[numbered]{}
 \useinnertheme[shadow]{rounded}
 
@@ -540,7 +520,7 @@ This package consists of the file  thubeamer.dtx,
   }%
 }
 
-\ifx\beamer@thusectoc\beamer@thusectiontoc
+\ifx\beamer@uestcsectoc\beamer@uestcsectiontoc
   \AtBeginSection[]{
     \begin{frame}
       \begin{multicols}{2}
@@ -550,7 +530,7 @@ This package consists of the file  thubeamer.dtx,
   }
 \fi
 
-\ifx\beamer@thusubsectoc\beamer@thusubsectiontoc
+\ifx\beamer@uestcsubsectoc\beamer@uestcsubsectiontoc
   \AtBeginSubsection[]{
     \begin{frame}
       \begin{multicols}{2}
@@ -561,29 +541,30 @@ This package consists of the file  thubeamer.dtx,
 \fi
 
 \mode<all>
-%</thuinnerstyle>
+%</uestcinnerstyle>
 %    \end{macrocode}
 % \subsection{外部主题文件部分}
 %
 %    \begin{macrocode}
-%<*thuouterstyle>
+
+%<*uestcouterstyle>
 %    \end{macrocode}
 %
 % 参数设置
 %    \begin{macrocode}
-\DeclareOptionBeamer{smoothbars}{\def\beamer@thubar{smoothbars}}
-\DeclareOptionBeamer{sidebar}{\def\beamer@thubar{sidebar}}
+\DeclareOptionBeamer{smoothbars}{\def\beamer@uestcbar{smoothbars}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@uestcbar{sidebar}}
 \ProcessOptionsBeamer
-\def\beamer@thusidebar{sidebar}
+\def\beamer@uestcsidebar{sidebar}
 
 \mode<presentation>
 
 % 取消导航符号
 \setbeamertemplate{navigation symbols}{}
 
-\ifx\beamer@thubar\beamer@thusidebar
+\ifx\beamer@uestcbar\beamer@uestcsidebar
   \useoutertheme[width=0.17\linewidth]{sidebar}
-  \logo{\includegraphics[width=0.08\linewidth]{thulogo.pdf}}
+  \logo{\includegraphics[width=0.08\linewidth]{uestclogo}}
 \else
   \useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
 \fi
@@ -618,17 +599,18 @@ This package consists of the file  thubeamer.dtx,
 \makeatother
 
 \mode<all>
-%</thuouterstyle>
+%</uestcouterstyle>
+
 %    \end{macrocode}
 %
 % \changes{v1.1.1}{2022/05/20}{fix \pkg{newpxtext} bug}
 % \iffalse
 %    \begin{macrocode}
+
 %<*dtx-style>
 \ProvidesPackage{dtx-style}
 \RequirePackage{hypdoc}
 \RequirePackage[UTF8,scheme=chinese,fontset=windowsnew]{ctex}
-% \RequirePackage{newpxtext}
 \setmainfont{TeXGyrePagellaX}[
   Extension   = .otf,
   UprightFont = *-Regular,
@@ -655,22 +637,22 @@ This package consists of the file  thubeamer.dtx,
 \RequirePackage{metalogo}
 \RequirePackage{hyperref}
 
-\colorlet{thu@macro}{purple!60!black}
-\colorlet{thu@env}{purple!70!black}
-\colorlet{thu@option}{purple}
-\patchcmd{\PrintMacroName}{\MacroFont}{\MacroFont\bfseries\color{thu@macro}}{}{}
-\patchcmd{\PrintDescribeMacro}{\MacroFont}{\MacroFont\bfseries\color{thu@macro}}{}{}
-\patchcmd{\PrintDescribeEnv}{\MacroFont}{\MacroFont\bfseries\color{thu@env}}{}{}
-\patchcmd{\PrintEnvName}{\MacroFont}{\MacroFont\bfseries\color{thu@env}}{}{}
+\colorlet{uestc@macro}{blue!60!black}
+\colorlet{uestc@env}{blue!70!black}
+\colorlet{uestc@option}{blue}
+\patchcmd{\PrintMacroName}{\MacroFont}{\MacroFont\bfseries\color{uestc@macro}}{}{}
+\patchcmd{\PrintDescribeMacro}{\MacroFont}{\MacroFont\bfseries\color{uestc@macro}}{}{}
+\patchcmd{\PrintDescribeEnv}{\MacroFont}{\MacroFont\bfseries\color{uestc@env}}{}{}
+\patchcmd{\PrintEnvName}{\MacroFont}{\MacroFont\bfseries\color{uestc@env}}{}{}
 
 \def\DescribeOption{%
   \leavevmode\@bsphack\begingroup\MakePrivateLetters%
   \Describe@Option}
 \def\Describe@Option#1{\endgroup
   \marginpar{\raggedleft\PrintDescribeOption{#1}}%
-  \thu@special@index{option}{#1}\@esphack\ignorespaces}
-\def\PrintDescribeOption#1{\strut \MacroFont\bfseries\sffamily\color{thu@option} #1\ }
-\def\thu@special@index#1#2{\@bsphack
+  \uestc@special@index{option}{#1}\@esphack\ignorespaces}
+\def\PrintDescribeOption#1{\strut \MacroFont\bfseries\sffamily\color{uestc@option} #1\ }
+\def\uestc@special@index#1#2{\@bsphack
   \begingroup
     \HD@target
     \let\HDorg@encapchar\encapchar
@@ -713,18 +695,17 @@ This package consists of the file  thubeamer.dtx,
    rulesep=1pt,
    framerule=1pt,
    backgroundcolor=\color{gray!5},
-   stringstyle=\color{purple!40!black!100},
-   keywordstyle=\bfseries\color{purple!50!black},
+   stringstyle=\color{blue!40!black!100},
+   keywordstyle=\bfseries\color{blue!50!black},
    commentstyle=\slshape\color{black!60}}
 
 \lstdefinestyle{lstStyleShell}{%
    style=lstStyleBase,
    frame=l,
-   rulecolor=\color{purple},
+   rulecolor=\color{blue},
    language=bash}
 
-% \definecolor{beamer@headercolor}{RGB}{21,95,130}
-\definecolor{beamer@headercolor}{RGB}{51,, 51, 178}
+\definecolor{beamer@headercolor}{RGB}{51, 51, 178}
 
 \lstdefinestyle{lstStyleLaTeX}{%
    style=lstStyleBase,
@@ -740,28 +721,26 @@ This package consists of the file  thubeamer.dtx,
 \DeclareDocumentCommand{\option}{m}{\textsf{#1}}
 \DeclareDocumentCommand{\env}{m}{\texttt{#1}}
 \DeclareDocumentCommand{\pkg}{s m}{%
-  \texttt{#2}\IfBooleanF#1{\thu@special@index{package}{#2}}}
+  \texttt{#2}\IfBooleanF#1{\uestc@special@index{package}{#2}}}
 \DeclareDocumentCommand{\file}{s m}{%
-  \texttt{#2}\IfBooleanF#1{\thu@special@index{file}{#2}}}
+  \texttt{#2}\IfBooleanF#1{\uestc@special@index{file}{#2}}}
 \newcommand{\myentry}[1]{%
-  \marginpar{\small\raggedleft\color{purple}\bfseries\strut #1}}
+  \marginpar{\small\raggedleft\color{blue}\bfseries\strut #1}}
 \newcommand{\note}[2][Note]{{%
-  \color{magenta}{\bfseries #1}\emph{#2}}}
+  \color{blue}{\bfseries #1}\emph{#2}}}
 
-
-\def\thubeamer{\textsc{Thu}\-\textsc{Beamer}}
-\def\thu{清华大学}
-\def \uestcbeamer{\textsc{Uestc}\-\textsc{Beamer}}
-\def \uestc{电子科技大学}
-
-
+\def\uestcbeamer{\textsc{Uestc}\-\textsc{Beamer}}
+\def\uestc{电子科技大学}
 %</dtx-style>
+
 %    \end{macrocode}
 % \fi
 %
 % \Finale
 %
+
 \endinput
+
 % \iffalse
 %  Local Variables:
 %  mode: doctex
