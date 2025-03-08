@@ -4,11 +4,11 @@
 
 ## Introduction to thubeamer
 
-**UestcBeamer** is a **beamer theme** designed for UESTC, which forked from [thubeamer](https://github.com/YangLaTeX/thubeamer). Current version is 1.0, updated on 2025/03/06. 
+**UestcBeamer** is a **beamer theme** designed for UESTCer, which forked from [thubeamer](https://github.com/YangLaTeX/thubeamer). Current version is 1.0, updated on 2025/03/06. 
 
 ## Documentation
 
-The documentation is similar to the origin project. Here is some simple refs to it.
+The documentation is similar to the origin project. Here are some simple refs to it.
 
 ### Makefile
 
