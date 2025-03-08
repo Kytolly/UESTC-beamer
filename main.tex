@@ -26,8 +26,8 @@
 % 使用 <uestcbeamer> 主题
 % 模板选项如下
 % (a.1) smoothbars: 页面顶端单行显示目录，默认选项
-\usetheme{thubeamer}
-
+% \usetheme{thubeamer}
+\usetheme{uestcbeamer}
 % (a.2) sidebar: 页面左侧分栏显示目录
 % \usetheme[sidebar]{thubeamer}
 
@@ -64,173 +64,17 @@
 }
 
 \section{研究内容及进度}
-
-\subsection{课题主要研究内容}
-
-\begin{frame}{课题主要研究内容}
-  \begin{figure}
-    \includegraphics[width=0.4\linewidth]{uestclogo}
-    \caption{课题主要研究内容}
-  \end{figure}
-\end{frame}
-
-\subsection{进度介绍}
-
-\begin{frame}{进度介绍}
-  \begin{figure}
-    \includegraphics[width=0.4\linewidth]{uestclogo}
-    \caption{进度介绍}
-  \end{figure}
-\end{frame}
+\input{sections/Research-Contents}
 
 \section{研究工作及成果}
-
-\begin{frame}{已完成的研究工作及成果}
-  \begin{block}{已完成的研究工作简介}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{研究工作一}
-
-\begin{frame}{研究工作一}
-  \begin{block}{无编号公式}
-    无编号公式示例：
-    $$
-      k:[-\pi,\pi] \rightarrow [0,1]
-    $$
-  \end{block}
-\end{frame}
-
-\subsection{研究工作二}
-
-\begin{frame}{研究工作二}
-  \begin{block}{有编号公式}
-    \begin{itemize}
-      \item 有编号公式示例：输入为图像 
-      \begin{equation}
-        \vx\in\reals^{C_{\text{in}}\times H\times W}
-      \end{equation}
-      其中 $C_{\text{in}}$ 表示通道, $H$ 表示图像高度, $W$ 表示图像深度.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{研究工作三}
-
-\begin{frame}{研究工作三}
-  \begin{block}{表格}
-    表格示例, 如表 \ref{tab:unique_values} 所示. 
-
-    \begin{table}[htbp]
-      \small
-      \centering
-      \caption{train.csv 每列非重复元素个数}
-      \label{tab:unique_values}
-      \begin{tabular}{lc}
-        \toprule
-        column & \# unique values \\
-        \midrule
-        posting\_id & 34250 \\
-        image & 32412 \\
-        image\_phash & 28735 \\
-        title & 33117 \\
-        label\_group & 11014 \\
-        \bottomrule
-      \end{tabular}
-    \end{table}
-  \end{block}
-\end{frame}
-
-\subsection{研究工作四}
-
-\begin{frame}{研究工作四}
-  \begin{block}{并排图片}
-    并排图片示例.
-  \end{block}
-  \begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.48\textwidth}
-      \centering
-      \includegraphics[width=3cm]{uestclogo}
-      \caption{并排图片1}
-      \label{fig:left_side}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-      \centering
-      \includegraphics[width=3cm]{uestclogo}
-      \caption{并排图片2}
-      \label{fig:right_side}
-    \end{minipage}
-  \end{figure}
-\end{frame}
+\input{sections/Results}
 
 \section{后期工作与安排}
-
-\subsection{后期研究工作}
-
-\begin{frame}{后期研究工作}
-  \begin{block}{后期研究工作}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{进度安排}
-
-\begin{frame}{进度安排}
-  \begin{block}{进度安排}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX\cite{liu2016}
-      \item XXXX\cite{ren2010}
-      \item XXXX\cite{Chen1992}
-      \item XXXX\cite{Gravagne2003}
-    \end{itemize}
-  \end{block}
-\end{frame}
+\input{sections/Future-work}
 
 \section{问题与解决方案}
+\input{sections/Solution}
 
-\begin{frame}{问题与解决方案}
-  \begin{block}{问题}
-    \begin{itemize}
-      \item XXXX
-    \end{itemize}
-  \end{block}
-  \begin{block}{对应解决方案}
-    \begin{itemize}
-      \item XXXX
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\section{按时完成可能性}
-
-\begin{frame}{按时完成可能性}
-  \begin{block}{按时完成可能性}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX\cite{xin1994}
-      \item XXXX\cite{zhai2015}
-      \item XXXX\cite{jones2004}
-      \item XXXX\cite{mcmahan2005}
-    \end{itemize}
-  \end{block}
-\end{frame}
 
 \begin{frame}[allowframebreaks]{参考文献}
   \bibliographystyle{thubeamer}
@@ -239,7 +83,7 @@
 
 \begin{frame}
 	\begin{center}
-    {\Huge\calligra Thanks for your attention!}
+    {\Huge\calligra\ Thanks for your attention!}
     \vspace{1cm}
 
     {\Huge Q \& A}

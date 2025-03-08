@@ -26,8 +26,9 @@
 \documentclass{beamer}
 
 % 使用 <thubeamer> 主题
-\usetheme[en]{thubeamer}
-
+% \usetheme[en]{thubeamer}
+% 使用 <uestcbeamer> 主题
+\usetheme[en]{uestcbeamer}
 % 模板选项如下
 % (a.1) smoothbars: 页面顶端单行显示目录，默认选项
 % (a.2) sidebar: 页面左侧分栏显示目录
@@ -66,144 +67,12 @@
 }
 
 \section{Research Contents}
-
-\subsection{Research Contents of This Project}
-
-\begin{frame}{Research Contents of This Project}
-  \begin{figure}
-    \includegraphics[width=0.4\linewidth]{thulogo}
-    \caption{Research Contents of This Project}
-  \end{figure}
-\end{frame}
-
-\subsection{Research progress}
-
-\begin{frame}{Research progress}
-  \begin{figure}
-    \includegraphics[width=0.4\linewidth]{thulogo}
-    \caption{Research progress}
-  \end{figure}
-\end{frame}
-
+\input{sections-en/Research-Contents}
 \section{Results}
-
-\begin{frame}{Results}
-  \begin{block}{Results}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{Case 1}
-
-\begin{frame}{Case 1}
-  \begin{block}{Unnumbered equation}
-    Example of unnumbered equation:
-    $$
-      k:[-\pi,\pi] \rightarrow [0,1]
-    $$
-  \end{block}
-\end{frame}
-
-\subsection{Case 2}
-
-\begin{frame}{Case 2}
-  \begin{block}{numbered equation}
-    \begin{itemize}
-      \item Example of numbered equation: the input is an image
-      \begin{equation}
-        \vx\in\reals^{C_{\text{in}}\times H\times W}
-      \end{equation}
-      where $C_{\text{in}}$ represents number of input channels, $H$ is the height of image, and $W$ is the width of image.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{Case 3}
-
-\begin{frame}{Case 3}
-  \begin{block}{Table}
-    Example of tables, shown in \ref{tab:unique_values}. 
-
-    \begin{table}[htbp]
-      \small
-      \centering
-      \caption{Unique elements in train.csv }
-      \label{tab:unique_values}
-      \begin{tabular}{lc}
-        \toprule
-        column & \# unique values \\
-        \midrule
-        posting\_id & 34250 \\
-        image & 32412 \\
-        image\_phash & 28735 \\
-        title & 33117 \\
-        label\_group & 11014 \\
-        \bottomrule
-      \end{tabular}
-    \end{table}
-  \end{block}
-\end{frame}
-
-\subsection{Case 4}
-
-\begin{frame}{Case 4}
-  \begin{block}{Parallel figures}
-    Example of parallel figures.
-  \end{block}
-  \begin{figure}[htbp]
-    \centering
-    \begin{minipage}[t]{0.48\textwidth}
-      \centering
-      \includegraphics[width=3cm]{thulogo.pdf}
-      \caption{Example figure 1}
-      \label{fig:left_side}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-      \centering
-      \includegraphics[width=3cm]{thulogo.pdf}
-      \caption{Example figure 2}
-      \label{fig:right_side}
-    \end{minipage}
-  \end{figure}
-\end{frame}
-
+\input{sections-en/Results}
 \section{Future Work}
+\input{sections-en/Future-work}
 
-\subsection{Future Work}
-
-\begin{frame}{Future work}
-  \begin{block}{Future work}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX
-      \item XXXX
-      \item XXXX
-      \item XXXX
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection{Scheduling}
-
-\begin{frame}{Scheduling}
-  \begin{block}{Scheduling}
-    \begin{itemize}
-      \setlength{\itemsep}{6pt}
-      \item XXXX\cite{webster2010}
-      \item XXXX\cite{jones2006}
-      \item XXXX\cite{mcmahan2005}
-      \item XXXX\cite{Gravagne2003}
-    \end{itemize}
-  \end{block}
-\end{frame}
 
 \begin{frame}[allowframebreaks]{Bibliography}
   \bibliographystyle{thubeamer}

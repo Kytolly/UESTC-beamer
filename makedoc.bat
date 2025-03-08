@@ -1,5 +1,5 @@
-xelatex thubeamer.dtx
-makeindex -s gind.ist -o thubeamer.ind thubeamer.idx
-makeindex -s gglo.ist -o thubeamer.gls thubeamer.glo
-xelatex thubeamer.dtx
-xelatex thubeamer.dtx
+xelatex uestcbeamer.dtx
+makeindex -s gind.ist -o uestcbeamer.ind uestcbeamer.idx
+makeindex -s gglo.ist -o uestcbeamer.gls uestcbeamer.glo
+xelatex uestcbeamer.dtx
+xelatex uestcbeamer.dtx
